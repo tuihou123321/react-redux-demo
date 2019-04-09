@@ -1,2 +1,1 @@
-# react-redux-demo
-react-redux-demo
+# daily coding
