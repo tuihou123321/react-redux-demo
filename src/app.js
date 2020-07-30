@@ -13,9 +13,15 @@ import reducer from 'reducer';
 import * as actionsCreators from 'actions';
 
 import CounterPanel from 'component/counter/CounterPanel';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 
-const store = createStore(reducer, applyMiddleware(thunk));
+// const store = createStore(reducer, applyMiddleware(thunk));
+
+const store = createStore(reducer, composeWithDevTools(
+    applyMiddleware(thunk),
+    // other store enhancers if any
+));
 
 
 // let propTypes = {
